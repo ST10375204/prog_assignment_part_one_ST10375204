@@ -25,6 +25,8 @@ public class Student {
         String ID;
         System.out.println("Enter students ID");
         ID=kb.next();
+        //this method gathers all user data, makes sure its all of the
+        //correct datatype/ranges and then passes it to the save student method
         while (true){  
             try{
                 if(Integer.parseInt(ID)>-1){
@@ -100,8 +102,8 @@ public class Student {
     
     public String deleteStudent(int id){
         boolean found=false;
-        for (int i = 0; i < studentID.size(); i++) {
-            if (id==studentID.get(i)) {              
+        for (int i = 0; i < studentID.size(); i++) {//loop through for match
+            if (id==studentID.get(i)) {//if found, ask the user to confirm              
                 System.out.println("Enter yes (y) to confirm");
                 String temp=kb.next();
                 if ("y".equals(temp)) {
